@@ -92,7 +92,7 @@ jsproxy_config({
       redir: 'https://php.net/'
     },
     'http://haha.com/': {
-      content: 'Hello World'
+      content: 'Hello OurGI!'
     },
   }
 })
