@@ -1,5 +1,8 @@
 deploy cf_worker/index.js into cloudflare worker
 
+ref: https://github.com/diyism/diyism.github.io/tree/main/jsproxy/cf_worker
+
+
 after git push github.com/diyism/diyism.github.io/jsproxy/
 
 firefox opened https://<cloudflare worker custom domain>/jsproxy/
