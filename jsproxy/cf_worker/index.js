@@ -3,7 +3,7 @@
 /**
  * static files (404.html, sw.js, conf.js)
  */
-const ASSET_URL = 'https://etherdream.github.io/jsproxy'
+const ASSET_URL = 'https://diyism.github.io/jsproxy'
 
 const JS_VER = 10
 const MAX_RETRY = 1
@@ -108,6 +108,8 @@ function httpHandler(req, pathname) {
 
   const reqHdrNew = new Headers(reqHdrRaw)
   reqHdrNew.set('x-jsproxy', '1')
+  //for overriding "Cf-Connecting-Ip", https://prx.gvgle.com/-----http://myhttpheader.com/
+  reqHdrNew.set("X-Real-IP", "8.8.8.8")
 
   // 此处逻辑和 http-dec-req-hdr.lua 大致相同
   // https://github.com/EtherDream/jsproxy/blob/master/lua/http-dec-req-hdr.lua
